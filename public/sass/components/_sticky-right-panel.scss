@@ -1,0 +1,76 @@
+.sticky-main-tabs {
+    position: fixed;
+    right: 25px;
+    width: 40px;
+    top: 310px;
+}
+.sticky-main-tabs .btn {
+    transform: rotate(-90deg);
+    border-radius: 0px;
+    padding: 6px 20px;
+}
+.overlay-full{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+    
+    z-index: 9999;
+    opacity:0;
+    visibility: hidden;
+    transition: all 0.2s ease 0s;
+    &.active{
+        opacity:1;
+        visibility: visible;
+        z-index:9999;
+    }
+}
+.sticky-right-panel {
+    
+    .sticky-right-content-panel {
+        
+        transform: translateX(100%);
+        transition: all 0.2s ease 0s;
+        
+        
+        width: 280px;
+        background: white;
+        -webkit-box-shadow: 0 0 10px 0 #ABABAB;
+        box-shadow: 0 0 10px 0 #ABABAB;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index:99999;
+        padding: 25px;
+        
+        overflow-y: auto;
+        
+        .close {}
+        
+        
+        
+        .form-control {
+            border:  none;
+            border-radius: 0px;
+            border-bottom: 1px solid;
+            border-color: map-get($colors, lightGray);
+            padding: 0px;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+        .label {
+            font-size: 12px;
+            border-color: map-get($colors, lightGrey); 
+        }
+    }
+    
+    &.active {
+        pointer-events:auto;
+        .sticky-right-content-panel {
+            transform: translateX(0);
+        }
+    }
+}

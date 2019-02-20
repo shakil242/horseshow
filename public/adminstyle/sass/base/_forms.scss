@@ -1,0 +1,35 @@
+.form-control{
+  font-size: 16px;
+  box-shadow: none;
+  border: 0;
+  border-bottom: 1px solid $border-color;
+  border-radius: 0;
+  padding: 0;
+  &:focus{
+    outline: none;
+    box-shadow: none;
+    border-color:$primary-color;
+  }
+}
+.btn-primary{
+  background: $primary-color;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  transition: all 0.5s;
+  &:hover,&:visited,&:active{
+    background: $primary-color-active;
+    transition: all 0.5s;
+  }
+}
+.btn-defualt{
+  color: $primary-color;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  &:hover{
+    transition: all 0.5s;
+    background: #545454;
+    color: #fff;
+  }
+}

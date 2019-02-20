@@ -1,0 +1,14 @@
+/** Importing all the sass files **/
+@import "helpers/_variables.scss";
+@import "base/_typograhpy.scss";
+@import "base/_forms.scss";
+@import "layout/_header.scss";
+@import "layout/_footer.scss";
+@import "pages/_admin-portal.scss";
+body,html{
+  height: 100%;
+}
+body{
+  background: $bg-body;
+  font-family: 'Roboto', sans-serif;
+}

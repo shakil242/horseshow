@@ -1,0 +1,12 @@
+#footer{
+  margin: 30px 0;
+  .copyrights{
+    text-align: center;
+    font-size: 13px;
+    color: #929191;
+    a{
+      font-weight: 500;
+      color: $primary-color;
+    }
+  }
+}

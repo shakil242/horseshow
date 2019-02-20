@@ -1,0 +1,14 @@
+    $(function(){
+      $(document).on('click', ".btn-invite-parti", function () {
+        var email = $(this).attr("data-email");
+        $(".previous-participants").append("<input type='hidden' name='pastParticipats[]' value='"+email+"'>")
+        $(this).attr('class', 'btn-uninvite-parti');
+        $(this).text('Unselect this participant');
+      });
+      $(document).on('click', ".btn-uninvite-parti", function () {
+        var email = $(this).attr("data-email");
+        $('.previous-participants input[value="'+email+'"]').remove();
+        $(this).attr('class', 'btn-invite-parti');
+        $(this).text('Select for Invite');
+      });
+    });

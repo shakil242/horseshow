@@ -1,0 +1,115 @@
+/****** theme color variations ******/
+$colors: (
+    primary: #001e46,
+    primary-shade1: #44547d,
+    primary-shade2: #8f9fcc,
+    secondary: #b8a057,
+    secondary-shade1: #cab881,
+    secondary-shade2: #dbcfab,
+    info: #0c5cc5,
+    info-shade1: #3d7dd1,
+    info-shade2: #6d9ddc,
+    info-shade3: #e2ebf8,
+    warning: #fa983a,
+    warning-shade1: #fbad61,
+    warning-shade2: #fcc189,
+    warning-shade3: #feead8,
+    danger: #db3c34,
+    danger-shade1: #e2635d,
+    danger-shade2: #e98a85,
+    danger-shade3: #f8d8d6,
+    success: #38ada9,
+    success-shade1: #60bdba,
+    success-shade2: #88cecb,
+    success-shade3: #d7efee,
+    muted: #676d7b,
+    muted-shade1: #858a95,
+    muted-shade2: #a4a7b0,
+    muted-shade3: #c2c5ca,
+    
+    content: #676d7b,
+    content-dark: #030303,
+    content-light: #a2a2a2,
+    
+    grey: #7a808d,
+    lightGrey: #CCCCCC,
+    
+    dark: #676d7b,
+    light: #f9f9f9,
+    light2: #eaedf4,
+    light3: #d4d4d4,
+    
+    featured: #db3c34,
+    delColor: #8f8f8f,
+    green: #38ada9,
+    blue: #3498db,
+    yellow: #faab3a,
+    
+//    success: #dff0d8,
+//    info: #d9edf7,
+//    warning: #fcf8e3,
+//    danger: #f2dede,
+    
+//    background: map-get($colors, secondary);
+    
+    
+);
+
+$styleList: text bg btn label fa label-bordered;
+$formStyleList: default info warning danger success disabled;
+
+
+$alerts: (
+    ((title success) (color darken(map-get($colors, success), 40%)) (bg-color map-get($colors, success)) (border-color darken(map-get($colors, success), 10%))),
+    ((title info) (color darken(map-get($colors, info), 40%)) (bg-color map-get($colors, info)) (border-color darken(map-get($colors, info), 10%))),
+    ((title warning) (color darken(map-get($colors, warning), 40%)) (bg-color map-get($colors, warning)) (border-color darken(map-get($colors, warning), 10%))),
+    ((title danger) (color darken(map-get($colors, danger), 40%)) (bg-color map-get($colors, danger)) (border-color darken(map-get($colors, danger), 10%)))
+);
+
+@each $alert-item in $alerts{
+    $title: nth($alert-item, 1);
+    $color: nth($alert-item, 2);
+    $bg-color: nth($alert-item, 3);
+    $border-color: nth($alert-item, 4);
+
+    .alert-#{nth($title, 2)}{background-color: nth($bg-color, 2); color: nth($color, 2); border-color: nth($border-color, 2);}
+}
+
+@each $text-color in $colors{
+    $index: index($colors, $text-color);
+
+    .text-#{nth($text-color, 1)}{color: nth($text-color, 2);}
+    .bg-#{nth($text-color, 1)}{background: nth($text-color, 2);}
+
+    .colors-holder > div:nth-child(#{$index}){background: nth($text-color, 2);}
+}
+
+$fonts: (
+    primary: ('Open Sans', sans-serif)
+);
+
+$default-radius: 0px;
+$content-size: 14px;
+$assetsPath: '../images';
+
+$fa-icons: (
+    angle-up: "\f106",
+    angle-right: "\f105",
+    angle-down: "\f107",
+    angle-left: "\f104",
+    angle-double-up: "\f102",
+    angle-double-right: "\f101",
+    angle-double-down: "\f103",
+    angle-double-left: "\f100",
+    facebook: "\f09a",
+    twitter: "\f099",
+    google-plus: "\f0d5",
+    phone: "\f095",
+    envelop: "\f0e0",
+    times-cirlce: "\f057",
+    calendar: "\f073"
+);
+
+@if($colors != null) {
+    .colors-length{width: #{length($colors)}px;}
+}

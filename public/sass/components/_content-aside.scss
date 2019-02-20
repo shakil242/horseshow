@@ -1,0 +1,64 @@
+/* Div base */
+.contetn-aside {
+    font-size: 12px;
+    padding-left: 40px;
+    
+    .detail-area {
+        padding-bottom: 20px;
+    }
+    .detail-area .hover-display {
+        visibility: hidden;
+    }
+    .detail-area:hover .hover-display {
+        visibility: visible;
+    }
+    
+    .label {
+        font-size: 14px;
+        display: block;
+        color: #333333;
+    }
+    
+    .listing {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .listing li {
+        margin: 0;
+        padding: 0;
+        line-height: 20px;
+    }
+    .listing li span.icon::before {
+        content: '-';
+        padding-right: 5px;
+    }
+}
+
+@media (max-width: 767px){
+    .contetn-aside {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin: 25px;
+        margin-top: 0px;
+        border-bottom: 1px solid;
+        border-color: map-get($colors, lightGray);
+        
+        .detail-area {
+            padding-bottom: 10px;
+        }
+        
+        .listing li {
+            display: inline-block; 
+            width: 48%
+        }
+    }
+}
+@media (max-width: 500px){
+    .contetn-aside {
+        .listing li {
+            display: block; 
+            width: 99%
+        }
+    }
+}

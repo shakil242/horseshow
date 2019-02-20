@@ -1,0 +1,121 @@
+/* GRID - TABLE */
+.table-line-braker {
+    border-spacing: 6px;
+    border-collapse: separate;
+    
+    th, td {
+        border-top: none;
+        padding: 6px;
+    }
+    thead th {
+        border-color: map-get($colors, lightGrey);
+        color: map-get($colors, content-dark);
+        font-weight: 400;
+    }
+    tbody td {
+        border-bottom: 1px solid;
+        border-color: map-get($colors, lightGrey);
+        padding-bottom: 8px;
+    }
+}
+
+.table-title {
+        display: none;
+        color: map-get($colors, content-dark);
+    }
+.custom-responsive-xs { }
+.custom-responsive-sm { }
+.custom-responsive-md { }
+.custom-responsive-lg { }
+    
+
+@media (max-width: 767px){
+    .table-line-braker th {
+        display: none;
+    }
+    table.table-line-braker td {
+        display: block;
+        padding: 0px;
+        border-bottom: 0px ;
+        line-height: 1.6em
+    }
+    table.table-line-braker td:last-child {
+        border-bottom: 1px solid;
+        border-color: map-get($colors, lightGrey);
+        width: 100%;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    .table-line-braker td.action {
+        text-align: left;
+    }
+    .table-line-braker .table-title {
+        display: block;
+    }
+}
+@media (max-width: 991px){
+    .custom-responsive-md th {
+        display: none;
+    }
+    table.custom-responsive-md td {
+        display: block;
+        padding: 0px;
+        border-bottom: 0px ;
+        line-height: 1.6em;
+        margin-bottom: 2px;
+    }
+    table.custom-responsive-md td:last-child {
+        border-bottom: 1px solid;
+        border-color: map-get($colors, lightGrey);
+        width: 100%;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    .custom-responsive-md td.action {
+        text-align: left;
+    }
+    .custom-responsive-md .table-title {
+        display: block;
+    }
+}
+@media (max-width: 767px){
+    .custom-responsive-sm th {
+        display: none;
+    }
+    table.custom-responsive-sm td {
+        display: block;
+        padding: 0px;
+        border-bottom: 0px ;
+        line-height: 1.6em
+    }
+    table.custom-responsive-sm td:last-child {
+        border-bottom: 1px solid;
+        border-color: map-get($colors, lightGrey);
+        width: 100%;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    .custom-responsive-sm td.action {
+        text-align: left;
+    }
+    .custom-responsive-sm .table-title {
+        display: block;
+    }
+}
+
+.table .action {
+    text-align: center;
+    width: 80px;
+}
+.table th.action a {
+    color: map-get($colors, green);
+}
+.table td.action a {
+    color: map-get($colors, gray);
+}
+.table td.action a.more {
+    color: map-get($colors, gray);
+}
+.table th.action a:hover, .table td.action a:hover  {
+    color: map-get($colors, secondary);
+}

@@ -1,0 +1,50 @@
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
+$(".bnt-menu").click(function(){
+  $(".main-menu").slideToggle();
+});
+
+$(function(){
+
+var url = window.location.pathname, 
+    urlRegExp = new RegExp(url.replace(/\/$/,'') + "$"); // create regexp to match current url pathname and remove trailing slash if present as it could collide with the link in navigation in case trailing slash wasn't present there
+    // now grab every link from the navigation
+    $('.main-menu li').each(function(){
+    $(this).removeClass('active');
+        // and test its normalized href against the url pathname regexp
+        if(urlRegExp.test($(this).find('a').attr('href').replace(/\/$/,''))){
+            $(this).addClass('active');
+        }
+    });
+
+});
+
+  $('input[name=module_launch_radio]:radio').on('change', function() {
+    var checkedvalue = $('input[name=module_launch_radio]:checked').val();
+    $("#module_launch_hidden").val(checkedvalue);
+  });
+  $('#storeandlist').on('click', function(event){
+        $("#afterstore").val("storeandlist");
+  });
+  $('#storeonly').on('click', function(event){
+        $("#afterstore").val("storeonly");
+  });
+
+$(window).scroll(function (event) {
+        var scroll = $(window).scrollTop();
+        if(scroll > 15){
+          $("#home-header").addClass("header-active");
+        }else {
+          $("#home-header").removeClass("header-active");
+        }
+});
+
+function isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    return true;
+}

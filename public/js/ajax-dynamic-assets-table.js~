@@ -1,0 +1,31 @@
+//Ajax datatable for Assets forms.
+
+$( document ).on( "click", "#display-assets-tables li", function($) {
+  
+    var asset_id = $(this).attr("data-attr");
+    $.ajax({
+          "url": '{{url("/master-template/get-asset-ajax/")}}'+asset_id,
+          "success": function(json) {
+              var tableHeaders= "";
+              $.each(json.columns, function(i, val){
+                  tableHeaders += "<th>" + val + "</th>";
+                  $(".ToggleColumb").append('<label><input type="checkbox" checked="checked" class="toggle-vis" data-column="'+i+'" /> '+val+'</label> - ');
+              });
+              $("#tableDiv").empty();
+              $("#tableDiv").append('<table id="AssetsTable" class="table primary-table dataTable no-footer" cellspacing="0" width="100%" class="table primary-table"><thead><tr>' + tableHeaders + '</tr></thead></table>');
+              $('#AssetsTable').DataTable({
+                  data: json.dat,
+                  "language": {
+                       "paginate": {
+                                  "first":      "First",
+                                  "last":       "Last",
+                                  "next":       "<i class='fa fa-angle-right' aria-hidden='true'></i>",
+                                  "previous":   "<i class='fa fa-angle-left' aria-hidden='true'></i>"
+                                  },
+                              },
+              });
+          },
+          "dataType": "json"
+      });
+});
+

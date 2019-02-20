@@ -1,0 +1,19 @@
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
+$(".bnt-menu").click(function(){
+  $(".main-menu").slideToggle();
+});
+
+
+  $('input[name=module_launch_radio]:radio').on('change', function() {
+    var checkedvalue = $('input[name=module_launch_radio]:checked').val();
+    $("#module_launch_hidden").val(checkedvalue);
+  });
+  $('#storeandlist').on('click', function(event){
+        $("#afterstore").val("storeandlist");
+  });
+  $('#storeonly').on('click', function(event){
+        $("#afterstore").val("storeonly");
+  });
+

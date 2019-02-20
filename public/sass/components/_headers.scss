@@ -1,0 +1,210 @@
+.main-header {
+    .top {
+        background: white;
+        padding: 10px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .logo-holder{
+        display: block;
+        width: 250px;
+    }
+    .logo-holder img {
+        display: block;
+    }
+    
+    .nav-list > li {
+        margin: 0;
+    }
+    .nav-list > li > a {
+        display: flex;
+        border-radius: 17px;
+        align-items: center;
+        white-space: nowrap;
+        height: 34px;
+        padding: 0 15px;
+        color: map-get($colors, primary);
+        font-weight: 600;
+    }
+    .nav-list > li:hover > a {
+        background: #e9f2fa;
+    }
+    .nav-list > li.active > a {
+        background: map-get($colors, secondary);
+        color: white;
+    }
+    
+    .right-area{
+        width:250px;
+        justify-content: flex-end;
+    }
+    
+    .search-field {
+        margin-right: 0px;
+        transition:all 0.2s ease 0s;
+    }
+    .search-field .input-group {
+        background: map-get($colors, light2);
+        height: 32px;
+        border-radius:17px;
+        border: 1px solid;
+        border-color: map-get($colors, light4);
+    }
+    .search-field .input-group .form-control {
+        background: none;
+        border: none;
+        font-size: 12px;
+        height: 32px;
+        width:60px;
+        transition:all 0.2s ease-in-out 0s;
+        &:focus{
+            width:130px;
+        }
+    }
+    .search-field .input-group-text {
+        background: none;
+        border: 0px;
+        padding: 0px;
+        margin-right: 8px;
+//        margin-top: -3px;
+    }
+    
+    .UserProfile .user-picture {
+        border-radius: 20px;
+    }
+    
+    /* This class created as per request of Shakeel 05-07-2018 */
+    .UserProfile input {
+        font-size: inherit;
+        color: inherit;
+        padding: 0px;
+        text-align: left;
+        background: none;
+        border: none;
+        padding-bottom: 5px;
+    }
+    
+    
+    .UserProfile .dropdown-item .fa {
+        color:map-get($colors, secondary);
+        padding-right: 10px;
+    }
+    
+    .bottom {
+        background: map-get($colors, primary);
+        border-top: 8px solid;
+        border-color: map-get($colors, primary);
+    }
+    .bottom .inline-list {
+        justify-content: center;
+    }
+    .bottom .inline-list > li {
+        margin: 0;
+    }
+    .bottom .inline-list > li a {
+        display: block;
+        text-decoration: none;
+        padding: 18px 0px;
+        margin: 0 20px;
+        color: white;
+        font-weight: 600;
+        position: relative;
+    }
+    .bottom .inline-list > li a:after {
+        content: "";
+        width: 0;
+        transition: all 0.4s ease;
+        height: 3px;
+        background: white;
+        position: absolute;
+        left: 0; bottom: 0;
+    }
+    .bottom .inline-list > li:hover > a:after {
+        width: 100%;
+    }
+    .bottom .inline-list > li.active a {
+        border-bottom: 3px solid #FFFFFF;
+        padding: 18px 0px 15px;
+        margin-bottom: -1px;
+        
+    }
+    .bottom .inline-list > li.active a:after {
+      border-bottom: none;
+        height: 0px;
+    }
+}
+
+/* Dropdown Menu  */
+.main-header {
+    .dropdown-menu {
+        border-radius: 0px;
+        right: 0;
+        left: auto !important;
+        transform: translate3d(0, 55px, 0) !important;
+        padding: 0px;
+        -webkit-box-shadow: 0 0 5px 0 #333333;
+        box-shadow: 0 0 5px 0 #333333;
+    }
+    .dropdown-item {
+        padding: 10px 15px;
+    }
+    .dropdown-item:focus, .dropdown-item:hover {
+        background: map-get($colors, primary);
+        color: #FFFFFF;
+    }
+}
+
+.header-responsive {    
+    color: #FFFFFF;
+    display: none;
+    background: map-get($colors, primary);
+}
+.header-responsive hr {
+    border-color: #FFFFFF;
+    opacity: .2;
+}
+.header-responsive .navbar-nav .nav-link {
+    color: #FFFFFF;        
+}
+.header-responsive .form-control {
+    width: 100%;
+    border-radius: 0px;
+}
+.header-responsive .dropdown-menu {
+    background: map-get($colors, f2f6fc);
+}
+.header-responsive .dropdown-item:focus, .dropdown-item:hover {
+    background: #e9f2fa;
+    color: #2c7dca;
+}
+
+@media (max-width: 1150px){
+    .main-header {
+        .nav-list > li > a {
+            font-size: 12px;
+            padding: 0 10px
+        }
+    }
+
+}
+
+@media (max-width: 991px){
+    .header-responsive {
+        display: block;
+    }
+    .main-header {
+        display: none;
+    }
+    
+    .UserProfile input {
+        font-size: inherit;
+        color: inherit;
+        padding: 0px;
+        text-align: left;
+        background: none;
+        border: none;
+        padding-bottom: 5px;
+    }
+}

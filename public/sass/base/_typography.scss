@@ -1,0 +1,88 @@
+html,
+body {
+    font-family: map-get($fonts, primary);
+    color: map-get($colors, content);
+    font-size: $content-size;
+    font-weight: 400; 
+    -webkit-appearance: none;
+    -webkit-font-smoothing: antialiased;
+    background: map-get($colors, light);
+}
+a {
+    color: map-get($colors, primary);
+    text-decoration: none;
+
+    &:hover,
+    &:focus{
+        color: map-get($colors, primary);
+        text-decoration: underline;
+    }
+}
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    margin: 0 0 15px;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: light;
+}
+h2 {
+    margin: 0 0 25px;
+    font-size: 22px;
+    font-weight:normal;
+}
+h3 {
+    font-size: 18px;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+h4 {
+    font-size: 18px;
+    font-weight: 400;
+}
+h5 {
+    font-size: 14px;
+    font-weight: 400;
+}
+h6 {
+    font-size: 12px;
+    font-weight: 400;
+
+}
+P {
+    argin: 0 0 15px;
+    line-height: 1.6;
+    font-size: 12px;
+}
+
+textarea:focus, input:focus{outline: none;}
+
+
+.text-primary { color: map-get($colors, primary) !important;  }
+.text-secondary { color: map-get($colors, secondary) !important;  }
+.text-white { color: map-get($colors, white) !important;  }
+.text-black { color: map-get($colors, black) !important;  }
+.text-white { color: map-get($colors, white) !important;  }
+.text-gray { color: map-get($colors, gray) !important;  }
+
+.text-danger { color: map-get($colors, featured) !important;  }
+.text-success { color: map-get($colors, green) !important;  }
+.text-info { color: map-get($colors, blue) !important;  }
+.text-warning { color: map-get($colors, yellow) !important;  }
+
+.text-disabled { color: map-get($colors, delColor) !important;  }
+
+
+.underline { text-decoration: underline; }
+.overline { text-decoration: overline; }
+
+.v-middle { vertical-align: middle;}
+
+.text-xs { font-size: 11px; }
+.text-sm { font-size: 13px; }
+.text-md { font-size: 16px; }
+.text-lg { font-size: 18px; }
+.text-xl { font-size: 20px; }

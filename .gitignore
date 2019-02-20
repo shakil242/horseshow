@@ -1,0 +1,14 @@
+/node_modules
+/public/storage
+/public/uploads
+/resources/views/errors/4045.blade.php
+/vendor
+/vendor2
+/.idea
+/public/uiux
+Homestead.json
+Homestead.yaml
+.env
+composer.lock
+
+/nbproject/private/

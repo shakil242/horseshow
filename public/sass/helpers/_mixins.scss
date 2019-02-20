@@ -1,0 +1,22 @@
+@mixin linear-gradient($color1, $color2) {
+    background: linear-gradient($color1, $color2);
+    background: -webkit-linear-gradient($color1, $color2);
+    background: -moz-linear-gradient($color1, $color2);
+}
+@mixin sameValue($properties-list, $val) {
+    $list: $properties-list;
+    @each $item in $list {
+        #{$item}: $val;
+    }
+}
+@mixin filters($expression) {
+    filter:#{$expression}; -moz-filter: #{$expression}; -webkit-filter: #{$expression}; -ms-filter: #{$expression};
+}
+@mixin dimentions($ww, $hh) {
+    width: $ww; height: $hh;
+}
+@mixin mq($query) {
+    @media screen and (#{$query}) {
+        @content;
+    }
+}

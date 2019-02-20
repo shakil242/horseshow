@@ -1,0 +1,47 @@
+.TD-center{
+	text-align:center;
+}
+.TD-left{
+	text-align:left;
+}
+.TD-right{
+	text-align:right;
+}
+.TD-main-container{
+	padding: 8px;
+	/*border: 1px solid #000000;*/
+	/*overflow: hidden;*/
+}
+.kv-file-upload.btn.btn-xs.btn-default {
+    display: none;
+}
+.btn.btn-default.fileinput-upload.fileinput-upload-button {
+    display: none;
+}
+.modal-dialog{
+    position: relative;
+    display: table;
+    overflow-y: auto;    
+    overflow-x: auto;
+    width: auto;
+    min-width: 300px;   
+}
+/*    .btn-file {
+        position: relative;
+        overflow: hidden;
+    }
+    .btn-file input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: white;
+        cursor: inherit;
+        display: block;
+    }*/

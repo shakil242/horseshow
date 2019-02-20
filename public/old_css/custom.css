@@ -1,0 +1,79 @@
+/**************category Selection Css***************/
+.stripeBtn {
+    background-image: linear-gradient(#28a0e5,#015e94);
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    padding: 5px;
+    width: 90%;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 9px;
+}
+.strp{
+    background-image: linear-gradient(#4d1311,#4d1311)}
+.select-selectpicker{ width: 1px!important;}
+
+
+
+/**************manage show css***************/
+
+
+.row.schedulerCon.schOdd {
+    background: #FFF;
+}
+.col-md-12.listCon {
+    line-height: 20px;
+
+}
+.listCon{
+    border-bottom: solid 1px #cdcdcd;
+
+}
+.labelCon {
+
+}
+
+.listClassContainer {
+    padding-left: 15px;
+    list-style: disclosure-closed;
+}
+.listclasscontainer li{list-style: disc}
+.desciptionCon:first-child {
+    border-top: none;
+}
+.desciptionCon {
+    border-left: solid 1px #cdcdcd;
+
+    line-height: 33px;
+}
+.row.schedulerCon.schEven {
+    background: #ededed;
+}
+
+.datetime-control {
+    float: none;
+    width:100% !important;
+}
+.adding-restrictions-options .bootstrap-select{ width: 90%!important;}
+
+/*.table-responsive {*/
+/*max-height:200px;*/
+/*}*/
+.slotsContainer{ margin-top: 20px; margin-bottom: 10px; width: 90%}
+
+.invite-participant-history #DataTables_Table_0_filter {
+    display: block!important;
+}
+.dataTables_filter {
+    float: right !important;
+}
+.dataTables_scroll
+{
+    overflow:auto;
+}
+
+.dropdown-menu{
+    overflow: initial !important;
+}

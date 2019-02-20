@@ -1,0 +1,180 @@
+.bs-column-gap-0{
+  margin: 0;
+  > *{padding: 0;}
+}
+$gutter: 1;
+@for $i from 1 through ceil(19/$gutter) {
+    $value: ($i + 1) * $gutter;
+    .bs-column-gap-#{$value}{
+        margin: 0 -#{$value/2}px;
+        > *{padding: 0 #{$value/2}px;}
+    }
+}
+
+$step: 5;
+@for $i from 0 through ceil(45/$step) {
+    $value: ($i + 1) * $step;
+
+    .mt-#{$value} {margin-top: #{$value}px !important;}
+    .mr-#{$value} {margin-right: #{$value}px !important;}
+    .mb-#{$value} {margin-bottom: #{$value}px !important;}
+    .ml-#{$value} {margin-left: #{$value}px !important;}
+
+    .pt-#{$value} {padding-top: #{$value}px !important;}
+    .pr-#{$value} {padding-right: #{$value}px !important;}
+    .pb-#{$value} {padding-bottom: #{$value}px !important;}
+    .pl-#{$value} {padding-left: #{$value}px !important;}
+}
+
+@media screen and (min-width: 1200px) {
+    $step: 5;
+    @for $i from 0 through ceil(45/$step) {
+        $value: ($i + 1) * $step;
+
+        .mt-#{$value}-lg {margin-top: #{$value}px !important;}
+        .mr-#{$value}-lg {margin-right: #{$value}px !important;}
+        .mb-#{$value}-lg {margin-bottom: #{$value}px !important;}
+        .ml-#{$value}-lg {margin-left: #{$value}px !important;}
+
+        .pt-#{$value}-lg {padding-top: #{$value}px !important;}
+        .pr-#{$value}-lg {padding-right: #{$value}px !important;}
+        .pb-#{$value}-lg {padding-bottom: #{$value}px !important;}
+        .pl-#{$value}-lg {padding-left: #{$value}px !important;}
+    }
+
+    .text-left-lg{text-align: left !important;}
+    .text-center-lg{text-align: center !important;}
+    .text-right-lg{text-align: right !important;}
+}
+@media screen and (max-width: 1199px) {
+    $step: 5;
+    @for $i from 0 through ceil(45/$step) {
+        $value: ($i + 1) * $step;
+
+        .mt-#{$value}-md {margin-top: #{$value}px !important;}
+        .mr-#{$value}-md {margin-right: #{$value}px !important;}
+        .mb-#{$value}-md {margin-bottom: #{$value}px !important;}
+        .ml-#{$value}-md {margin-left: #{$value}px !important;}
+
+        .pt-#{$value}-md {padding-top: #{$value}px !important;}
+        .pr-#{$value}-md {padding-right: #{$value}px !important;}
+        .pb-#{$value}-md {padding-bottom: #{$value}px !important;}
+        .pl-#{$value}-md {padding-left: #{$value}px !important;}
+    }
+
+    .text-left-md{text-align: left !important;}
+    .text-center-md{text-align: center !important;}
+    .text-right-md{text-align: right !important;}
+}
+@media screen and (max-width: 991px) {
+    $step: 5;
+    @for $i from 0 through ceil(45/$step) {
+        $value: ($i + 1) * $step;
+
+        .mt-#{$value}-sm {margin-top: #{$value}px !important;}
+        .mr-#{$value}-sm {margin-right: #{$value}px !important;}
+        .mb-#{$value}-sm {margin-bottom: #{$value}px !important;}
+        .ml-#{$value}-sm {margin-left: #{$value}px !important;}
+
+        .pt-#{$value}-sm {padding-top: #{$value}px !important;}
+        .pr-#{$value}-sm {padding-right: #{$value}px !important;}
+        .pb-#{$value}-sm {padding-bottom: #{$value}px !important;}
+        .pl-#{$value}-sm {padding-left: #{$value}px !important;}
+    }
+
+    .text-left-sm{text-align: left !important;}
+    .text-center-sm{text-align: center !important;}
+    .text-right-sm{text-align: right !important;}
+}
+@media screen and (max-width: 767px) {
+    $step: 5;
+    @for $i from 0 through ceil(45/$step) {
+        $value: ($i + 1) * $step;
+
+        .mt-#{$value}-xs {margin-top: #{$value}px !important;}
+        .mr-#{$value}-xs {margin-right: #{$value}px !important;}
+        .mb-#{$value}-xs {margin-bottom: #{$value}px !important;}
+        .ml-#{$value}-xs {margin-left: #{$value}px !important;}
+
+        .pt-#{$value}-xs {padding-top: #{$value}px !important;}
+        .pr-#{$value}-xs {padding-right: #{$value}px !important;}
+        .pb-#{$value}-xs {padding-bottom: #{$value}px !important;}
+        .pl-#{$value}-xs {padding-left: #{$value}px !important;}
+    }
+
+    .text-left-xs{text-align: left !important;}
+    .text-center-xs{text-align: center !important;}
+    .text-right-xs{text-align: right !important;}
+}
+@media screen and (max-width: 600px) {
+    .stack-on-600{flex-direction: column;}
+    .stack-on-600 > *{float: none; width: 100%;}
+}
+@media screen and (max-width: 500px) {
+    .stack-on-500{flex-direction: column;}
+    .stack-on-500 > *{float: none; width: 100%;}
+}
+@media screen and (max-width: 400px) {
+    .stack-on-400{flex-direction: column;}
+    .stack-on-400 > *{float: none; width: 100%;}
+}
+
+.last-margin-0 > *:last-child{margin-bottom: 0 !important;}
+
+
+// To generate classes and style from " $styleList and $colors list "
+@each $style in $styleList{
+    $s: index($styleList, $style);
+    @each $color_key,$color in $colors {
+        $c: index($colors, $color);
+        .#{$style}-#{$color_key} { 
+            @if $style == bg{
+                background-color: #{$color} !important;
+            }
+            @else if $style == label{
+                background-color: #{$color};
+                color: map-get($colors,white);
+            }
+            @else if $style == btn{
+                background-color: #{$color};
+                color: map-get($colors,white);
+                border:1px solid #{$color};
+                &:hover,&:focus,&:active,&:active:focus{
+                    background-color: #{$color} !important;
+                    color: map-get($colors,white) !important;
+                    outline:none !important;
+                }
+            }
+            @else if $style == label-bordered{
+                border:1px solid #{$color};
+            }
+            @else {
+                color: #{$color};
+            }
+        }
+    }
+}
+
+
+// Generate Margin and Padding Classes
+$general_properties : (
+    margin-top:mt,
+    margin-bottom:mb,
+    margin-left:ml,
+    margin-right:mr,
+    padding-top:pt,
+    padding-bottom:pb,
+    padding-right:pr,
+    padding-left:pl
+);
+
+@for $i from 0 through 12 {
+    @each $p_key,$p_val in $general_properties{
+        .#{$p_val}-#{$i * 5}{
+            #{$p_key}: #{$i * 5}px;
+        }
+        .#{$p_val}--#{$i * 5}{
+            #{$p_key}: -#{$i * 5}px;
+        }
+    }
+}

@@ -1,0 +1,1 @@
+This Class has been combined with other classes<strong>({{ implode(",",$asAr) }})</strong> and merged Under a Single Class <a href="javascript:" onclick="selectCombined('{{$assetId}}','{{$formId}}')"> {{GetAssetNamefromId($assetTitle)}} </a>

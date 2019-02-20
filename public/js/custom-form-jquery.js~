@@ -1,0 +1,7 @@
+$(document).on("click","input[type='radio']", function(e){ 
+    var attribute = $(this).attr("data-attr");
+    $("input[data-attr="+attribute+"]:radio").not(this).prop('checked', false);
+});
+$(function () {
+
+});

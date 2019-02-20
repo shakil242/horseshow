@@ -1,0 +1,8 @@
+$(function () {
+    //select 
+    $('.selectpickers').selectpicker('render');
+    //Date
+    $('.datetimepickerDate').datetimepicker({
+        format: 'YYYY/MM/DD'
+    });
+});

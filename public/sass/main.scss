@@ -1,0 +1,44 @@
+/****** Fonts ******/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700');
+//@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"');
+
+
+/****** SCSS Functions ******/
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/utility';
+
+/****** Default Styles ******/
+@import 'base/typography';
+
+/****** Global Classes ******/
+@import 'base/global';
+
+/****** Building Blocks ******/
+@import 'components/navigation';
+@import 'components/headers';
+@import 'components/footers';
+
+/****** Card ******/
+@import 'components/cards';
+
+/****** Menu ******/
+@import 'components/mega-menu';
+
+/****** Sticky Right Panel ******/
+@import 'components/sticky-right-panel';
+
+/****** Content Aside ******/
+@import 'components/content-aside';
+
+/****** Content Aside ******/
+@import 'components/forms';
+
+/****** Table ******/
+@import 'components/table';
+
+/****** Custom Tabs ******/
+@import 'components/custom-tabs';
+
+/****** Blog ******/
+@import 'components/blog';

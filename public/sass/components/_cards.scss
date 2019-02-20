@@ -1,0 +1,205 @@
+.custom-card-5group {
+    display: block;
+}
+.custom-card-5group .card {
+    background: #f2f6fc;
+    padding: 15px;
+    font-size: 12px;
+    height: 80px;
+    width: 18%;
+    display: inline-block;
+    line-height: 1.2px;
+}
+.custom-card-5group .card:nth-child(5) {
+//    margin-right: 0px;  
+}
+.custom-card-5group .card h5 {
+    color: #3185d5;
+    margin-bottom: 0px;
+}
+.custom-card-5group .card .icon {
+    font-size: 18px;
+    float: left;
+    height: 80px;
+    width: 16px;
+    margin-right: 10px;
+    color: #b6b9bf;
+
+}
+
+
+.card-group { margin: -30px; margin-bottom: 20px !important; display: flex;}
+.card {
+    background: map-get($colors, light);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius:0px;
+    font-size: 12px;
+    line-height: 1.2em;
+    height: 80px;
+    width: 220px;
+}
+.card .card-title, .card h5 {
+    font-size: 14px;
+    color: #3185d5;
+    margin-bottom: 0px;
+}
+.card .icon {
+    font-size: 14px;
+    float: left;
+}
+
+.cards-holder {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px -25px -15px;
+    position: relative;
+//    overflow: hidden;
+    padding-top: 4px;
+        
+    .item {
+        width: 20%;
+        padding: 0 15px;
+        margin-bottom: 25px;
+    }
+    .item-four {
+        width: 25%;
+        padding: 0 15px;
+        margin-bottom: 25px;
+    }
+        
+    .card-widget {
+        background: white;
+        padding: 15px;
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        text-decoration: none;
+        -webkit-box-shadow: 0 0 4px 2px #e1dfdf;
+        box-shadow: 0 0 4px 2px #e1dfdf;
+    }
+    .card-widget .icons-holder {
+        flex-shrink: 0;
+        color: map-get($colors, content-light);
+        font-size: 18px;
+        margin: 0;
+        line-height: 1;
+    }
+    .card-widget .desc {
+        flex-grow: 1;
+        padding-left: 12px;
+        font-size: 12px;
+    }
+    .card-widget .desc h5 {
+        color: map-get($colors, content-dark);
+        margin: 0 0 7px;
+        line-height: 1.1;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .card-widget .desc small {
+        display: block;
+        color: map-get($colors, content);
+    }
+    
+    .card-widget .desc p {
+        color: #666666;
+        line-height: 1.4;
+        font-size: 12px;
+    }
+    .card-widget .desc > *:last-child {
+        margin-bottom: 0;
+    }
+    
+    /* Card Hover Effect */
+    .info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: map-get($colors, secondary);
+//        z-index: 2;
+        color: white;
+        font-size: 12px;
+        padding: 15px;
+        transition: all .8s ease;
+        transform: scale(1, 0);
+        opacity: 0;
+        text-decoration: none;
+    }
+    
+    .card-widget:hover .info {
+        transform: scale(1, 1);
+        opacity: 1;
+        text-align: center;
+    }
+    
+     .card-widget .filter {
+        z-index:3;
+    }
+    .card-widget .filter.show{
+        z-index:1020;
+    }
+    .card-widget .filter.show .dropdown-menu-custom{
+        margin-top: -30px;
+    }
+    
+    .filter {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 35px;
+        height: 35px;
+        background: #FFFFFF;
+        
+        
+        -webkit-box-shadow: 0 0 5px 0 #BABABA;
+        box-shadow: 0 0 5px 0 #BABABA;
+    }
+    .filter-icon {
+        color: map-get($colors, content-light); 
+
+    }
+    /* ./ Card Hover Effect */
+    
+    @media (max-width: 991px){
+        .item{width: 25%;}
+    }
+    @media (max-width: 767px) {
+        .item{width: 33.3333%;}
+    }
+    @media (max-width: 600px) {
+        .item{width: 50%;}
+    }
+    @media (max-width: 450px) {
+        .item{width: 100%;}
+    }
+}
+
+
+.card-small-area {
+    .cards-holder {
+        .item {
+            width: 25%;
+        }
+    
+        @media (max-width: 991px) {
+            .item { width: 33.333%; }
+        }
+        @media (max-width: 767px) {
+            .item{width: 33.3333%;}
+        }
+        @media (max-width: 600px) {
+            .item{width: 50%;}
+        }
+        @media (max-width: 450px) {
+            .item{width: 100%;}
+        }
+    }
+}
+
+#show_search_view .card-widget {
+    min-height: 150px;
+}
